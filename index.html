@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>pynoriX | Digital Atelier</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Space+Grotesk:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error-dim": "#c8475d",
+                    "error": "#fd6f85",
+                    "tertiary-fixed-dim": "#f3f0ef",
+                    "on-primary-fixed-variant": "#5313bd",
+                    "on-tertiary-fixed": "#515050",
+                    "tertiary-fixed": "#ffffff",
+                    "surface-container": "#1a1919",
+                    "surface-container-low": "#131313",
+                    "surface-container-high": "#20201f",
+                    "on-primary-container": "#000000",
+                    "inverse-primary": "#6e3bd7",
+                    "inverse-on-surface": "#565554",
+                    "on-secondary": "#364600",
+                    "surface-container-lowest": "#000000",
+                    "primary-dim": "#8455ef",
+                    "primary-fixed": "#cbb6ff",
+                    "on-secondary-fixed-variant": "#526900",
+                    "error-container": "#8a1632",
+                    "on-surface-variant": "#acabaa",
+                    "tertiary-dim": "#eeeaea",
+                    "primary": "#ac8aff",
+                    "secondary-fixed-dim": "#beee00",
+                    "secondary-container": "#1f2900",
+                    "inverse-surface": "#fcf8f8",
+                    "tertiary": "#fcf9f8",
+                    "surface-bright": "#2c2c2c",
+                    "tertiary-container": "#eeeaea",
+                    "on-secondary-container": "#8db100",
+                    "on-background": "#e8e5e4",
+                    "surface-container-highest": "#262626",
+                    "primary-container": "#8f60fa",
+                    "outline-variant": "#484848",
+                    "on-secondary-fixed": "#3a4a00",
+                    "on-error-container": "#ff97a3",
+                    "on-primary-fixed": "#31007b",
+                    "background": "#0e0e0e",
+                    "outline": "#767575",
+                    "on-error": "#490013",
+                    "on-tertiary-container": "#575656",
+                    "on-tertiary-fixed-variant": "#6e6d6c",
+                    "on-primary": "#280067",
+                    "primary-fixed-dim": "#bfa5ff",
+                    "surface-dim": "#0e0e0e",
+                    "surface-variant": "#262626",
+                    "on-tertiary": "#605f5e",
+                    "surface": "#0e0e0e",
+                    "secondary-dim": "#9fc700",
+                    "secondary-warm": "#abd600",
+                    "secondary": "#abd600",
+                    "surface-tint": "#ac8aff",
+                    "secondary-fixed": "#cafd00",
+                    "on-surface": "#e8e5e4"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Noto Serif"],
+                    "body": ["Space Grotesk"],
+                    "label": ["Space Grotesk"]
+            }
+          },
+        },
+      }
+    </script>
+<style>.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr
+    }
+.grain-overlay {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuCO5u4ZCRI5yYPO5PuzhhJS5IPze5aMkYkhDJcgtvltMEQ6KjBD0kynjOr4QxW2X5f71f02Bijn3ghriOXLezZ9MlCtV8jC0h1in4-cQE9ZyuMca-B8U9HbA2zPH3-aG_XQhWxJWep9JLCDSiF7qhAbzaMYTT0tky9g581TAyGkmRDglK9XoBp858sSKLtUISCzJ5LC86ksrbPWsLQjidHCkO5nSiuAuemvOPi1Awhwh6hIaOC4Vv-dL9PQwGsEXTeuVu7YXfqvXzI);
+    opacity: 0.03;
+    pointer-events: none
+    }
+.glass-card {
+    backdrop-filter: blur(12px);
+    background: rgba(38, 38, 38, 0.4)
+    }</style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body selection:bg-primary/30">
+<!-- Top Navigation Anchor -->
+<header class="fixed top-0 w-full z-50 bg-zinc-950/80 backdrop-blur-xl shadow-[0_40px_40px_-5px_rgba(232,229,228,0.06)] flex justify-between items-center px-6 h-20">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-violet-400 active:scale-95 duration-200 cursor-pointer" data-icon="menu">menu</span>
+<h1 class="font-serif italic text-2xl bg-gradient-to-r from-violet-400 to-violet-600 bg-clip-text text-transparent">pynoriX</h1>
+</div>
+<span class="material-symbols-outlined text-zinc-500 hover:opacity-80 transition-opacity active:scale-95 duration-200 cursor-pointer" data-icon="notifications">notifications</span>
+</header>
+<main class="relative pt-20 pb-32 overflow-x-hidden">
+<!-- Hero Section -->
+<section class="relative min-h-[751px] flex flex-col justify-center px-8 pt-12 overflow-hidden">
+<!-- Background Ethereal Glows -->
+<div class="absolute top-[-10%] left-[-20%] w-[100%] h-[60%] bg-primary/20 rounded-full blur-[120px] -z-10"></div>
+<div class="absolute bottom-[-10%] right-[-20%] w-[80%] h-[50%] bg-secondary/10 rounded-full blur-[100px] -z-10"></div>
+<div class="max-w-md space-y-8">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface-container-high border border-outline-variant/20">
+<span class="w-2 h-2 rounded-full bg-secondary shadow-[0_0_10px_#abd600]"></span>
+<span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant font-medium">1TB Curator Space</span>
+</div>
+<h2 class="font-headline text-5xl md:text-6xl text-on-surface leading-[1.1] tracking-tight">
+                    Elevate Your <br/>
+<span class="italic text-primary">Creative Legacy</span>
+</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed max-w-[85%] font-light">
+                    The digital atelier where data becomes art. Archive your vision in an ethereal vault designed for the modern curator.
+                </p>
+<div class="flex flex-col gap-4 pt-6">
+<button class="bg-primary text-on-primary py-5 px-8 rounded-xl font-medium text-lg flex items-center justify-between group active:scale-95 transition-all">
+<span>Enter Atelier</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<button class="bg-transparent border border-outline-variant/30 text-on-surface py-5 px-8 rounded-xl font-medium text-lg hover:bg-surface-container-low active:scale-95 transition-all">
+                        The Manifesto
+                    </button>
+</div>
+</div>
+<!-- Hero Image / Visual Element -->
+<div class="mt-16 relative aspect-[4/5] rounded-xl overflow-hidden shadow-2xl">
+<img alt="Ethereal abstract visual" class="w-full h-full object-cover grayscale brightness-75 contrast-125" data-alt="abstract ethereal liquid shapes in dark purple and black with metallic sheen and soft highlights in a dreamy void" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZ0bb1BsESuCVTFPkGkbhNnBshvQN3IDWJmedFaXGc63LJFQL5jXouMc7krjwOlvzfmzmw8q2YcvKC_gHojxnJDvt020bm7xY-vvBzfmD0XEhtookUnKcr_-RO2nCSYDukdwsRdLudg4mWq_TKbXyxSvsvZTwsjLXRsxjCvwpV3culu4nu9KtBbJzlKECrEUGOriZSIGxtAeNYT22PhftODQMRPTIWAibD92OgLsPFDbxjvQrtWLV6znbbhMeP12yaBVCdP3_CYF8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6 p-6 glass-card rounded-lg">
+<div class="flex items-center justify-between mb-4">
+<span class="font-label text-[10px] uppercase tracking-widest text-primary-fixed">Network Integrity</span>
+<span class="font-label text-[10px] text-on-surface-variant">99.9%</span>
+</div>
+<div class="h-1 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary to-secondary w-[85%] relative">
+<div class="absolute inset-0 grain-overlay"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Features Section -->
+<section class="px-6 mt-24 space-y-12">
+<header class="space-y-2">
+<h3 class="font-headline text-3xl">Curated Architecture</h3>
+<p class="text-on-surface-variant font-light">Refining the way you interact with storage.</p>
+</header>
+<div class="grid grid-cols-2 gap-4">
+<!-- Large Feature -->
+<div class="col-span-2 bg-surface-container-low p-8 rounded-lg relative overflow-hidden group">
+<div class="relative z-10 space-y-4">
+<span class="material-symbols-outlined text-secondary text-4xl" data-icon="auto_awesome">auto_awesome</span>
+<h4 class="font-headline text-2xl">AI-Curation</h4>
+<p class="text-on-surface-variant text-sm font-light">Our engine intelligently organizes your assets by aesthetic and conceptual metadata.</p>
+</div>
+<div class="absolute -right-8 -bottom-8 w-48 h-48 bg-secondary/5 rounded-full blur-3xl group-hover:bg-secondary/10 transition-colors"></div>
+</div>
+<!-- Small Features -->
+<div class="bg-surface-container-low p-6 rounded-lg space-y-4 aspect-square flex flex-col justify-end">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="encrypted">encrypted</span>
+<div>
+<h4 class="font-label font-bold text-sm">Obsidian Vault</h4>
+<p class="text-on-surface-variant text-[10px] leading-tight mt-1">End-to-end ethereal encryption for your most sensitive data.</p>
+</div>
+</div>
+<div class="bg-surface-container-low p-6 rounded-lg space-y-4 aspect-square flex flex-col justify-end">
+<span class="material-symbols-outlined text-violet-300 text-3xl" data-icon="speed">speed</span>
+<div>
+<h4 class="font-label font-bold text-sm">Light Speed</h4>
+<p class="text-on-surface-variant text-[10px] leading-tight mt-1">Multi-nodal synchronization across your entire creative studio.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Dynamic Capacity Display -->
+<section class="px-6 mt-24">
+<div class="bg-surface-container p-10 rounded-xl border border-outline-variant/10 text-center space-y-6">
+<h3 class="font-headline text-2xl italic text-primary">Your Creative Horizon</h3>
+<div class="relative py-8">
+<div class="text-7xl font-headline tracking-tighter text-on-surface">1<span class="text-3xl text-zinc-600">TB</span></div>
+<p class="font-label text-[10px] uppercase tracking-[0.2em] text-on-surface-variant mt-2">Maximum Potential</p>
+</div>
+<div class="h-px w-12 bg-outline-variant/30 mx-auto"></div>
+<p class="text-on-surface-variant text-sm font-light px-4">Standard in every atelier. Expandable as your legacy grows.</p>
+</div>
+</section>
+<!-- Footer / Call to Action Final -->
+<footer class="mt-32 px-8 pb-12 space-y-12 border-t border-outline-variant/10 pt-20">
+<div class="space-y-6">
+<h4 class="font-serif italic text-3xl text-primary">pynoriX</h4>
+<div class="flex flex-wrap gap-8">
+<a class="text-on-surface-variant text-sm hover:text-primary transition-colors" href="#">Atelier</a>
+<a class="text-on-surface-variant text-sm hover:text-primary transition-colors" href="#">Manifesto</a>
+<a class="text-on-surface-variant text-sm hover:text-primary transition-colors" href="#">Legal</a>
+<a class="text-on-surface-variant text-sm hover:text-primary transition-colors" href="#">Support</a>
+</div>
+</div>
+<p class="text-[10px] font-label uppercase tracking-widest text-zinc-600">© 2024 PYNORIX DIGITAL SYSTEMS. ALL RIGHTS RESERVED.</p>
+</footer>
+</main>
+<!-- Navigation Shell (BottomNavBar) -->
+<nav class="fixed bottom-0 w-full rounded-t-[3rem] z-50 bg-zinc-950/90 backdrop-blur-2xl shadow-[0_-10px_40px_rgba(0,0,0,0.5)] flex justify-around items-center h-24 px-4 pb-4">
+<!-- Atelier (Active State based on page intent - Landing acts as entry to Atelier) -->
+<div class="flex flex-col items-center justify-center text-zinc-500 hover:text-zinc-300 transition-all cursor-pointer">
+<span class="material-symbols-outlined text-2xl" data-icon="dashboard">dashboard</span>
+<span class="font-mono text-[10px] uppercase tracking-widest mt-1">Atelier</span>
+</div>
+<div class="flex flex-col items-center justify-center text-zinc-500 hover:text-zinc-300 transition-all cursor-pointer">
+<span class="material-symbols-outlined text-2xl" data-icon="folder_open">folder_open</span>
+<span class="font-mono text-[10px] uppercase tracking-widest mt-1">Vault</span>
+</div>
+<div class="flex flex-col items-center justify-center text-zinc-500 hover:text-zinc-300 transition-all cursor-pointer">
+<span class="material-symbols-outlined text-2xl" data-icon="account_balance_wallet">account_balance_wallet</span>
+<span class="font-mono text-[10px] uppercase tracking-widest mt-1">Exhibits</span>
+</div>
+<div class="flex flex-col items-center justify-center text-zinc-500 hover:text-zinc-300 transition-all cursor-pointer">
+<span class="material-symbols-outlined text-2xl" data-icon="settings">settings</span>
+<span class="font-mono text-[10px] uppercase tracking-widest mt-1">Settings</span>
+</div>
+</nav>
+<!-- Decorative Grain Texture -->
+<div class="fixed inset-0 grain-overlay z-[100] opacity-[0.02]"></div>
+</body></html>
